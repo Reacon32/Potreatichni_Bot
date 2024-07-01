@@ -24,30 +24,51 @@ async def start(message: types.Message):
 
 @dp.message_handler(commands='sv')
 async def start(message: types.Message):
-    await bot.send_photo(message.chat.id, photo= 'https://structure.mil.ru/images/SAVX9004.jpg', caption= 'Вид вооруженных сил Российской Федерации, предназначенный для отражения агрессии противника на континентальных театрах военных действий, защиты территориальной целостности и национальных интересов РФ.', reply_markup= get_keyboard_inline1())
+    await bot.send_photo(message.chat.id,
+    photo= 'https://structure.mil.ru/images/SAVX9004.jpg',
+    caption= 'Сухопутные войска \nВид вооруженных сил Российской Федерации, предназначенный для отражения агрессии противника на континентальных театрах военных действий, защиты территориальной целостности и национальных интересов РФ.',
+    reply_markup= get_keyboard_inline1())
 
 @dp.message_handler(commands='vvs')
 async def start(message: types.Message):
-    await bot.send_photo(message.chat.id, photo= 'https://structure.mil.ru/images/military/military/photo/vvs_aviation.jpg', caption= 'Вид вооружённых сил Российской Федерации, предназначенный для самостоятельных действий при решении оперативно-стратегических задач и для совместных действий с другими видами вооружённых сил.', reply_markup= get_keyboard_inline2())
+    await bot.send_photo(message.chat.id,
+    photo= 'https://structure.mil.ru/images/military/military/photo/vvs_aviation.jpg',
+    caption= 'Военно воздушные силы \nВид вооружённых сил Российской Федерации, предназначенный для самостоятельных действий при решении оперативно-стратегических задач и для совместных действий с другими видами вооружённых сил.',
+    reply_markup= get_keyboard_inline2())
 
 @dp.message_handler(commands='vmf')
 async def start(message: types.Message):
-    await bot.send_photo(message.chat.id, photo= 'https://structure.mil.ru/images/kfl-550.jpg', caption= 'Вид вооружённых сил Российской Федерации, предназначенный для обеспечения защиты национальных интересов Российской Федерации и ее союзников в Мировом океане военными методами.', reply_markup= get_keyboard_inline3())
+    await bot.send_photo(message.chat.id,
+    photo= 'https://structure.mil.ru/images/kfl-550.jpg',
+    caption= 'Военно морской флот \nВид вооружённых сил Российской Федерации, предназначенный для обеспечения защиты национальных интересов Российской Федерации и ее союзников в Мировом океане военными методами.',
+    reply_markup= get_keyboard_inline3())
 
 @dp.message_handler(commands='vdv')
 async def start(message: types.Message):
-    await bot.send_photo(message.chat.id, photo= 'https://structure.mil.ru/images/vdv_centrtop.jpg', caption= 'Отдельный вид войск Вооружённых сил Российской Федерации, предназначенный для охвата противника по воздуху и выполнения задач в его тылу по нарушению управления войсками.', reply_markup= get_keyboard_inline4())
+    await bot.send_photo(message.chat.id,
+    photo= 'https://structure.mil.ru/images/vdv_centrtop.jpg',
+    caption= 'Воздушно дессантные силы \nОтдельный вид войск Вооружённых сил Российской Федерации, предназначенный для охвата противника по воздуху и выполнения задач в его тылу по нарушению управления войсками.',
+    reply_markup= get_keyboard_inline4())
 
 @dp.message_handler(commands='rvsn')
 async def start(message: types.Message):
-    await bot.send_photo(message.chat.id, photo= 'https://structure.mil.ru/images/IMG_0203.jpg', caption= 'Вид вооружённых сил Российской Федерации, предназначеный для ядерного сдерживания возможной агрессии и поражения в составе СЯС или самостоятельно массированными, групповыми или одиночными ракетно-ядерными ударами по стратегическим объектам', reply_markup= get_keyboard_inline5())
+    await bot.send_photo(message.chat.id,
+    photo= 'https://structure.mil.ru/images/IMG_0203.jpg',
+    caption= 'Ракетные войска \nВид вооружённых сил Российской Федерации, предназначеный для ядерного сдерживания возможной агрессии и поражения в составе СЯС или самостоятельно массированными, групповыми или одиночными ракетно-ядерными ударами по стратегическим объектам',
+    reply_markup= get_keyboard_inline5())
 
 @dp.message_handler(commands='vks')
 async def start(message: types.Message):
-    await bot.send_photo(message.chat.id, photo= 'https://structure.mil.ru/images/vks_775.jpg', caption= 'Вид вооружённых сил Российской Федерации, предназначенный для ведения разведки воздушно-космической обстановки, вскрытия начала воздушного и ракетного воздушно-космического нападения и оповещения органов государственного и военного управления о нем.', reply_markup= get_keyboard_inline6())
+    await bot.send_photo(message.chat.id,
+    photo= 'https://structure.mil.ru/images/vks_775.jpg',
+    caption= 'Воздушно-космические силы \nВид вооружённых сил Российской Федерации, предназначенный для ведения разведки воздушно-космической обстановки, вскрытия начала воздушного и ракетного воздушно-космического нападения и оповещения органов государственного и военного управления о нем.',
+    reply_markup= get_keyboard_inline6())
+
+
 
 async def on_startup(dispatcher):
     await set_commands(dispatcher.bot)
 
 if __name__ == "__main__":
     executor.start_polling(dp, skip_updates=True, on_startup= on_startup)
+
